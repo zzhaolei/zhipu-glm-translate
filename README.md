@@ -1,9 +1,13 @@
 # zhipu-glm-translate
-> 智谱 GLM 大模型译插件
+> 基于智谱 GLM 大模型翻译
 
 ## Requirements
 
 安装依赖 [comment-translate](https://github.com/intellism/vscode-comment-translate)
+
+切换到 `zhipu-glm-translate` 源：
+1. 通过快捷键 `ctrl+shift+p` 或 `cmd+shift+p` 搜索`Comment translate: Change translate source`并回车确定
+2. 在确定后显示的下拉选项中选择 `Zhipu GLM translate`
 
 ## Extension Settings
 需要配置 `apiKey`

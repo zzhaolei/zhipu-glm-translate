@@ -7,9 +7,9 @@ const PREFIXCONFIG = 'glmTranslate';
 
 interface GLMTranslateOption {
     apiKey?: string;
-    model?: string;
-    sourceLanguage?: string;
-    targetLanguage?: string;
+    model: string;
+    sourceLanguage: string;
+    targetLanguage: string;
 }
 
 export class GLMTranslate implements ITranslate {
@@ -39,7 +39,7 @@ export class GLMTranslate implements ITranslate {
 
     async translate(content: string, { to = 'auto' }: ITranslateOptions): Promise<string> {
         if (!this._config.apiKey) {
-            return "需要提供智谱的 APIKey";
+            return '需要提供智谱的 APIKey';
         }
         const apiUrl = 'https://open.bigmodel.cn/api/paas/v4/chat/completions';
 
