@@ -1,0 +1,84 @@
+{
+  "name": "zhipu-glm-translate",
+  "displayName": "zhipu-glm-translate",
+  "description": "zhipu glm model translate",
+  "version": "0.0.1",
+  "publisher": "zhaolei",
+  "homepage": "https://github.com/zzhaolei/zhipu-glm-translate",
+  "bugs": {
+    "url": "https://github.com/zzhaolei/zhipu-glm-translate/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zzhaolei/zhipu-glm-translate.git"
+  },
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "translateSource",
+    "comment translate",
+    "glm",
+    "glm translate",
+    "翻译",
+    "注释",
+    "翻訳"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "icon": "./image/logo.png",
+  "contributes": {
+    "configuration": [
+      {
+        "title": "GLM translate Configuration",
+        "type": "Object",
+        "properties": {
+          "glmTranslate.apiKey": {
+            "type": "string",
+            "markdownDescription": "申请 [APIKey](https://www.bigmodel.cn/usercenter/proj-mgmt/apikeys)"
+          },
+          "glmTranslate.model": {
+            "type": "string",
+            "default": "GLM-4-Flash",
+            "markdownDescription": "指定 GLM 模型，默认为 GLM-4-Flash"
+          }
+        }
+      }
+    ],
+    "translates": [
+      {
+        "translate": "glm",
+        "title": "Zhipu GLM translate"
+      }
+    ]
+  },
+  "extensionDependencies": [
+    "intellsmi.comment-translate"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.102.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "eslint": "^9.32.0",
+    "typescript": "^5.9.2",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "comment-translate-manager": "^0.0.5"
+  }
+}
